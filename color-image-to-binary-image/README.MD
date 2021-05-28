@@ -1,6 +1,6 @@
 # imgToBinary
 
-This Python script can be used to convert RGB images to binary images. (I mostly used it to convert color images of drum notes to printer-friendly version of said images)
+This Python script can be used to convert RGB images to binary images. (I mostly used it to convert color images of drum notes to a printer-friendly version of said images)
 
 ## Usage
 
@@ -11,4 +11,4 @@ python imgToBinary.py
 ```
 ## Acknowledgements
 
-I used [this](https://stackoverflow.com/questions/12201577/how-can-i-convert-an-rgb-image-into-grayscale-in-python) and [this](https://stackoverflow.com/questions/48729656/how-to-convert-grayscale-image-to-binary-image-and-reverse-the-process-in-python) from stackoverflow.
+I used [this](https://stackoverflow.com/questions/12201577/how-can-i-convert-an-rgb-image-into-grayscale-in-python) and [this](https://stackoverflow.com/questions/48729656/how-to-convert-grayscale-image-to-binary-image-and-reverse-the-process-in-python) discussion from stackoverflow.
