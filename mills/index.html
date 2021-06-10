@@ -3,7 +3,11 @@
     <head>
         <title>Mills 4AM</title>
         <link rel="icon" href="favicon.ico"/>
+        <link rel="apple-touch-icon" href="favicon.ico">
         <link rel="stylesheet" href="index.css">
+        <link rel="manifest" href="manifest.json">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#986139"/>
     </head>
     <body>
         <div class="canvas-container">
@@ -12,5 +16,6 @@
         <div id="container" class="overlay"></div>
         <script src="konva.min.js"></script>
         <script src="game.js"></script>
+        <script src="service-worker-init.js"></script>
     </body>
 </html>

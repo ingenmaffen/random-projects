@@ -1,5 +1,7 @@
 const canvas = document.getElementById("canvas");
-var ctx = canvas.getContext("2d");
+const ctx = canvas.getContext("2d");
+let radius = 25;
+let pieceOutline = 4;
 
 drawBoard = () => {
     ctx.fillStyle = "burlywood";
@@ -49,10 +51,10 @@ createPiece = (color, positionX, positionY, layer) => {
     const piece = new Konva.Circle({
       x: positionX,
       y: positionY,
-      radius: 25,
+      radius: radius,
       fill: color,
       stroke: 'black',
-      strokeWidth: 4,
+      strokeWidth: pieceOutline,
       draggable: true,
     });
 
@@ -70,6 +72,15 @@ createPiece = (color, positionX, positionY, layer) => {
 drawPieces = () => { 
     const WIDTH = window.innerWidth;
     const HEIGHT = window.innerHeight;
+    let pieceOffset = radius * 2 + 10;
+    let firstPieceOffset = 100;
+    if (pieceOffset * 9 > HEIGHT - firstPieceOffset) {
+      firstPieceOffset = HEIGHT / 10;
+      pieceOffset = (HEIGHT - firstPieceOffset) / 9;
+      radius = (pieceOffset - 10) / 2;
+      pieceOutline = Math.floor(radius / 6);
+
+    }
     const stage = new Konva.Stage({
       container: 'container',
       width: WIDTH,
@@ -78,8 +89,8 @@ drawPieces = () => {
     const layer = new Konva.Layer();
     stage.add(layer);
     for (let i = 0; i < 9; i++) {
-        createPiece('red', 100, 100 + i * 60, layer);
-        createPiece('green', WIDTH - 100, 100 + i * 60, layer);
+        createPiece('red', 100, firstPieceOffset + i * pieceOffset, layer);
+        createPiece('green', WIDTH - 100, firstPieceOffset + i * pieceOffset, layer);
     }
 
 }
@@ -90,3 +101,4 @@ beginGame = () => {
 }
 
 beginGame();
+

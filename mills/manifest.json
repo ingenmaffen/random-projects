@@ -1,0 +1,30 @@
+{
+    "short_name": "Mills 4AM",
+    "name": "Mills 4AM",
+    "icons": [
+      {
+        "src": "assets/icon.png",
+        "type": "image/png",
+        "sizes": "512x512",
+        "purpose": "any maskable"
+      },
+      {
+        "src": "assets/icon-medium.png",
+        "type": "image/png",
+        "sizes": "192x192",
+        "purpose": "any"
+      },
+      {
+        "src": "assets/icon-small.png",
+        "type": "image/png",
+        "sizes": "144x144",
+        "purpose": "any"
+      }
+    ],
+    "start_url": "https://mills-4am.web.app/",
+    "theme_color": "#986139",
+    "background_color": "#986139",
+    "display": "standalone",
+    "orientation": "landscape",
+    "prefer_related_applications": false
+  }
